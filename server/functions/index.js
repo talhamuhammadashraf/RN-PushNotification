@@ -1,4 +1,5 @@
 
+
 /**
  * Firebase functions listeners
  */
@@ -22,22 +23,26 @@ const db = admin.database();
 
 ///ask-genius/request/{requestId}
 //https://gullychat-3f64a.firebaseio.com/business/-KxlP4ipLPmAsrCeA8zm/images/-KxlP4lF22SLxuXrx3AT/imageUrl
-exports.pushNotification = functions.database.ref('/timePeriod/')
+exports.pushNotification = functions.database.ref('/timePeriod/{pushnId}/')
     .onWrite(event => {
         // This registration token comes from the client FCM SDKs.
-        var registrationToken = "cuGBmcXMrjM:APA91bEZdtEng5gA1ExH1KvAg-6ipkqdLM5s45WFeHjYTd8CnTNqQq7yekkERzE2WIn4lm6Eclf1xpNOBNEFPE_fLo6fUSVBMPJAMA6TvlAMlK5oAGxeWUilwh0dacSGY4tXxHDPhdjh";
+        var registrationToken = "fbay37nfnG4:APA91bEz7LTlQGHByC-tFgeK3cKWd5LEVCez8rG0bdv8WPsZvuvL1iGdO3OHSg0t18Kz3f3uj0d0wCXUc3Q9_FeN_kGWBSb8jH2_utiK-RwGt_aExYp0yxPVwM9aVSfIA1y4jDsFQdh8";
         
-
-        const original=event.data.val()
-
-        console.log('event****');
+        const original=event.data
+        var boolean=event.data.previous.exists()
+        console.log("boolean",boolean)
+        console.log(event.params.pushnId);
+        var name=!boolean?original.name:null;
+        var login_time=!boolean?new Date(original.timeIn+18000000).toLocaleTimeString():null
+        console.log("name",name)
+        console.log("login time",time)        
         console.log(original);
 // See the "Defining the message payload" section below for details
 // on how to define a message payload.
         var payload = {
             notification: {
-                title: 'You have been invited to a trip.',
-                body: 'Tap here to check it out!'
+                title: name,
+                body: "logged in at "+time
             }
         };
 

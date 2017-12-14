@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "312303248462",
-    "firebase_url": "https://push-notification-01996.firebaseio.com",
-    "project_id": "push-notification-01996",
-    "storage_bucket": "push-notification-01996.appspot.com"
+    "project_number": "853589186002",
+    "firebase_url": "https://link-assignment.firebaseio.com",
+    "project_id": "link-assignment",
+    "storage_bucket": "link-assignment.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:312303248462:android:10ddfde4ef3217ff",
+        "mobilesdk_app_id": "1:853589186002:android:10ddfde4ef3217ff",
         "android_client_info": {
           "package_name": "com.pushnot"
         }
       },
       "oauth_client": [
         {
-          "client_id": "312303248462-4p539rnfn7dvndlsvtheme9d5pdt5nsl.apps.googleusercontent.com",
+          "client_id": "853589186002-js0h3v5tnn08r97v43libm9e4r194st2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBI5TU4K2SRWwbdfL3kKEuPN9ecQK7hbP8"
+          "current_key": "AIzaSyDU9RN8B8WkmSw_B2NE0sj-yMpQ0Knmnf8"
         }
       ],
       "services": {
