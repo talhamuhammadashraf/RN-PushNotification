@@ -18,11 +18,11 @@ jobs:
         #     sparse-checkout: 'android'
         #     sparse-checkout-cone-mode: false
       
-      - name: set up JDK 11
+      - name: set up JDK 8
         uses: actions/setup-java@v4
         with:
-          java-version: '20'
-          distribution: 'adopt'
+          java-version: '8'
+          distribution: 'oracle'
           cache: gradle
 
       - name: Grant execute permission for gradlew
@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with: 
-          node-version: '22'
+          node-version: '6'
 
       - name: Run Yarn Install
         run: | 
