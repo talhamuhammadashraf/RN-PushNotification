@@ -19,16 +19,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-        
+
+    - name: checkout android folder
+      run: cd android
+      
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
-
-    - name: Check gradle version
-      run: gradle --version
-
-    - name: Init gradle wrapper
-      run: gradle wrapper
-
+      
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
