@@ -23,7 +23,6 @@ jobs:
         with:
           java-version: '8'
           distribution: 'zulu'
-          cache: gradle
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./android/gradlew
@@ -31,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with: 
-          node-version: '6'
+          node-version: '8'
 
       - name: Run Yarn Install
         run: | 
